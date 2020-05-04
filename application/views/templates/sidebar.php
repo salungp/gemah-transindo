@@ -23,6 +23,7 @@
     <li><a href="<?php echo base_url('admin'); ?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
     <li><a href="<?php echo base_url('visitor'); ?>"><i class="fa fa-bar-chart"></i> <span>Visitor</span></a></li>
     <li><a href="<?php echo base_url('content'); ?>"><i class="fa fa-table"></i> <span>Content</span></a></li>
+    <li><a href="<?php echo base_url('setting'); ?>"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
     <li class="treeview">
       <a href="#"><i class="fa fa-users"></i> <span>User</span>
         <span class="pull-right-container">

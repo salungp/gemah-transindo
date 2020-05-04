@@ -10,8 +10,8 @@ class Backup_db extends CI_Controller
       'dst' => 'backup/files' // dir name backup output destination
     ];
 
-    $this->load->library('recurseZip_lib', $opt);
-    $download = $this->recursezip_lib->compress();
+    $this->load->library('RecurseZip_lib', $opt);
+    $download = $this->RecurseZip_lib->compress();
 
     redirect(base_url($download));
   }

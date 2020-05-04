@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class recurseZip_lib
+class RecurseZip_lib
 {
   function __construct($opt)
   {

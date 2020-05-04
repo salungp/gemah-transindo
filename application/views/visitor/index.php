@@ -4,7 +4,7 @@ $table = [
   'title' => 'Data visitor',
   'theme' => 'striped',
   'search' => false,
-  'width' => 8
+  'width' => 12
 ];
 ?>
 

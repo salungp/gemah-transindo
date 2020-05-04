@@ -23,6 +23,8 @@
 		$tentang = $this->db->get_where('content', ['title' => 'tentang'])->row_array();
 		$kontak_atas = $this->db->get_where('content', ['parent' => 'kontak'])->row_array();
 		$nomor_wa = $this->db->get_where('content', ['title' => 'nomor-wa'])->row_array();
+		$footer = $this->db->get_where('content', ['title' => 'footer'])->row_array();
+		$social_media = $this->db->get_where('content', ['title' => 'social-media'])->result_array();
 
 		$data = [
 			'armada' => $armada,
@@ -35,10 +37,12 @@
 			'kontak_atas' => $kontak_atas,
 			'kontak_list' => $kontak_list,
 			'nomor_wa' => $nomor_wa,
+			'footer' => $footer,
+			'social_media' => $social_media,
 		];
 
-		$this->load->view('home_templates/header', ['title' => 'Gemah transindo', 'tentang' => $tentang]);
+		$this->load->view('home_templates/header', ['title' => 'Gemah transindo - '. $banner['text'], 'tentang' => $tentang]);
 		$this->load->view('home/index', $data);
-		$this->load->view('home_templates/footer');
+		$this->load->view('home_templates/footer', ['banner' => $banner]);
 	}
 }
