@@ -70,7 +70,7 @@ $table = [
     <th style="width: 10px">No</th>
     <th>Aksi</th>
     <th>Judul</th>
-    <th>Isi</th>
+    <th style="width: 300px;">Isi</th>
     <th>Parent</th>
     <th>Gambar</th>
   </tr>

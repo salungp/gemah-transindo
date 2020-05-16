@@ -1,3 +1,5 @@
+<?php $user = $this->db->get_where('user', ['id' => $this->session->userdata('login')])->row_array(); ?>
+<?php $user_role = $this->db->get_where('user_role', ['id' => $user['role']])->row_array(); ?>
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 
@@ -24,6 +26,8 @@
     <li><a href="<?php echo base_url('visitor'); ?>"><i class="fa fa-bar-chart"></i> <span>Visitor</span></a></li>
     <li><a href="<?php echo base_url('content'); ?>"><i class="fa fa-table"></i> <span>Content</span></a></li>
     <li><a href="<?php echo base_url('setting'); ?>"><i class="fa fa-cog"></i> <span>Setting</span></a></li>
+    <!-- only administrator -->
+    <?php if ($user_role['title'] != 'editor') : ?>
     <li class="treeview">
       <a href="#"><i class="fa fa-users"></i> <span>User</span>
         <span class="pull-right-container">
@@ -35,6 +39,7 @@
         <li><a href="<?php echo base_url('role/list'); ?>">User role</a></li>
       </ul>
     </li>
+    <?php endif; ?>
   </ul>
   <!-- /.sidebar-menu -->
 </section>

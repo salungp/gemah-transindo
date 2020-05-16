@@ -3,6 +3,10 @@
 <title><?php echo $title; ?></title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<!-- Link favico -->
+<?php $favicon = $this->db->get_where('content', ['title' => 'favicon'])->row_array(); ?>
+<link rel="shorcut icon" href="<?php echo base_url($favicon['image']); ?>">
+
 <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/bootstrap/dist/css/bootstrap.min.css'); ?>">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/font-awesome/css/font-awesome.min.css'); ?>">

@@ -39,7 +39,7 @@
 			$file_name = $_FILES['image']['name'];
 			$file_from = $_FILES['image']['tmp_name'];
 			$eks = explode('.', $file_name)[count(explode('.', $file_name))-1];
-			$allow_ekse = ['jpg', 'png', 'gif'];
+			$allow_ekse = ['jpg', 'png', 'gif', 'ico'];
 
 			if (!in_array($eks, $allow_ekse)) {
 				$this->message->alert('danger', 'Maaf ekstensi selain gambar tidak diperbolehkan');
@@ -77,7 +77,7 @@
 			$file_name = $_FILES['image']['name'];
 			$file_from = $_FILES['image']['tmp_name'];
 			$eks = explode('.', $file_name)[count(explode('.', $file_name))-1];
-			$allow_ekse = ['jpg', 'png', 'gif'];
+			$allow_ekse = ['jpg', 'png', 'gif', 'ico'];
 
 			if (!in_array($eks, $allow_ekse)) {
 				$this->message->alert('danger', 'Maaf ekstensi selain gambar tidak diperbolehkan');
